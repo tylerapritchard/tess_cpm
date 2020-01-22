@@ -6,7 +6,7 @@ from astroquery.mast import Tesscut
 
 
 def get_data(ra, dec, units="deg", size=64):
-    c = SkyCoord(ra, dec, units=units)
+    c = SkyCoord(ra, dec, unit=units)
     data_table = Tesscut.download_cutouts(c, size=size)
     return data_table
 
